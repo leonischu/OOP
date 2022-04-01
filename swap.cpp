@@ -1,0 +1,47 @@
+  #include<iostream.h>
+#include<conio.h>
+class bswap;
+class aswap{
+	int a;
+	public:
+	void getdata(){
+		cout<<"Enter the value of a:"<<endl;
+		cin>>a;
+		
+	}
+	void displaydata(){
+		cout<<"The value is:"<<a<<endl;
+		
+	}
+	friend void swap(aswap x, bswap y);
+	};
+	class bswap{
+		int b;
+		public:
+		void getdata(){
+			cout<<"Enter the value of b"<<endl;
+			cin>>b;
+		}
+		void displaydata(){
+			cout<<"The input data is:"<<b<<endl;
+		}
+		friend void swap(aswap x, bswap y);
+				
+	};
+	 void swap(aswap x, bswap y){
+ 		int temp;
+ 		temp= x.a;
+ 		x.a=y.b;
+ 		y.b=temp;
+ 		cout<<"the swap value are:"<<x.a<<y.b<<endl;
+ 	}
+ 	int main(){
+	 	aswap a1;
+	 	bswap b1;
+	 	a1.getdata();
+	 	b1.getdata();
+	 	a1.displaydata();
+	 	b1.displaydata();
+	 	swap(a1,b1);
+	 	getch();
+	 }
