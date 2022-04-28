@@ -52,7 +52,7 @@ int main(){
     b.media::display();
     b.get();
     t.get();
-    b.media::display();
+   // b.media::display();
     b.display();
     t.display();
     getch();
