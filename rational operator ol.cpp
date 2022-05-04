@@ -20,7 +20,7 @@ class rational
     }
     rational operator+(rational r2){
         rational r;
-        r.num=num+r2.den+num*r2.den;
+        r.num=num+r2.den+r2.num*den;
         r.den=den*r2.den;
         return r;
     }
