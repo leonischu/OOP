@@ -1,5 +1,6 @@
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
+using namespace std;
 class time{
 	int hr,min,sec;
 	public:
