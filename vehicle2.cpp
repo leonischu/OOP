@@ -17,24 +17,24 @@ class vehicle{
     }
 };
 class car:public vehicle{
-   
+
     char brand[20];
     public:
     car(char *e,int p,char *b):vehicle(e,p){
         strcpy(brand,b);
-        
+
     }
     void display(){
         cout<<"Brand is:"<<brand<<endl;
     }
 };
 class bike:public vehicle{
-    
+
     char color[20];
     public:
     bike(char *e,int p,char *c):vehicle(e,p){
         strcpy(color,c);
-        
+
     }
     void display(){
         cout<<"Color is "<<color<<endl;
@@ -43,9 +43,10 @@ class bike:public vehicle{
 int main(){
     car c("gas engine",10000,"bmw");
     bike b("petrol",10000,"black");
-    c.car::display();
-    c.display();
-    b.bike::display();
+    c.vehicle::display();
+   
+    b.vehicle::display();
+     c.display();
     b.display();
     getch();
 }
